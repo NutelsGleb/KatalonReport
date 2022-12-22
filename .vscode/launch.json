@@ -7,15 +7,15 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Upload Postman Task",
-      "program": "${workspaceFolder}/tasks/UploadPostmanHtmlReport/index.js",
+      "name": "Upload Katalon Task",
+      "program": "${workspaceFolder}/tasks/UploadKatalonHtmlReport/index.js",
       "outputCapture": "std",
       "env": {
         "AGENT_JOBNAME": "jobname",
         "SYSTEM_DISPLAYNAME": "displayname",
         "SYSTEM_STAGEDISPLAYNAME": "stagedisplayname",
         "SYSTEM_STAGEATTEMPT": 1,
-        "INPUT_CWD": "${workspaceFolder}/tasks/UploadPostmanHtmlReport/test"
+        "INPUT_CWD": "${workspaceFolder}/tasks/UploadKatalonHtmlReport/test"
       },
       "skipFiles": [
         "<node_internals>/**"
