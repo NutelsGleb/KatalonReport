@@ -17,8 +17,8 @@ import { Tab, TabBar, TabSize } from "azure-devops-ui/Tabs"
 import { Card } from "azure-devops-ui/Card"
 import { IHeaderCommandBarItem } from "azure-devops-ui/HeaderCommandBar";
 
-const ATTACHMENT_TYPE = "postman.summary";
-const REPORT_ATTACHMENT_TYPE = "postman.report";
+const ATTACHMENT_TYPE = "katalon.summary";
+const REPORT_ATTACHMENT_TYPE = "katalon.report";
 const OUR_TASK_IDS = [
   // PROD
   "f5384bf0-1b5c-11ea-b0cc-5b064956a213",
@@ -50,7 +50,7 @@ SDK.ready().then(() => {
 
 function setText (message: string) {
   console.log(message)
-  const messageContainer = document.querySelector("#postman-ext-message p")
+  const messageContainer = document.querySelector("#katalon-ext-message p")
   if (messageContainer) {
     messageContainer.innerHTML = message
   }
@@ -73,7 +73,7 @@ function displayReports(attachmentClient: AttachmentClient) {
   const nbAttachments = attachmentClient.getAttachments().length
   if (nbAttachments) {
     ReactDOM.render(<TaskAttachmentPanel attachmentClient={attachmentClient} />, document.getElementById("postman-ext-container"))
-    document.getElementById("postman-ext-message").style.display = "none"
+    document.getElementById("katalon-ext-message").style.display = "none"
   } else {
   setError(Error("Could not find any report attachment"))
   }
