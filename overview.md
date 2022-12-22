@@ -1,24 +1,24 @@
-# Azure Devops Postman HTML Report
+# Azure Devops Katalon HTML Report
 
 ## About
 
-This Azure DevOps extension provides task for Publishing Postman / Newman HTML Reports into built into Azure Storage.
+This Azure DevOps extension provides task for Publishing Katalon HTML Reports into built into Azure Storage.
+
+It base on Maciej Maciejewski Postman Report extension (https://marketplace.visualstudio.com/items?itemName=MaciejMaciejewski.postman-report&ssr=false#overview)
 
 Reports can be viewed as a tab in Build and Release result page. Each Tab contains embeded reports as well as direct download links.
 
-For more info please refer to documentation page on [GitHub](https://github.com/maciejmaciejewski/azure-pipelines-postman)
-
 ## Configuration
 
-In order to use this extension first add `Upload Postman HTML Report` task to your pipeline. In your Postman / Newman execution task add `htmlextra` reporter that will generate `HTML` reports.
+In order to use this extension first add `Upload Katalon HTML Report` task to your pipeline. In your Katalon execution task add `htmlextra` reporter that will generate `HTML` reports.
 
-This tasks takes two parameters - required `cwd` which is path to the location where Postman / Newman HTML reports are stored and also optional `tabName` which is the name of the tab displayed within Azure DevOps report.
+This tasks takes two parameters - required `cwd` which is path to the location whereKatalon HTML reports are stored and also optional `tabName` which is the name of the tab displayed within Azure DevOps report.
 
 ```YAML
 steps:
-- task: UploadPostmanHtmlReport@1
-  displayName: 'Upload Postman Html Report'
+- task: UploadKatalonHtmlReport@1
+  displayName: 'Upload Katalon Html Report'
   inputs:
     cwd: '$(System.DefaultWorkingDirectory)'
-    tabName: 'Postman Test'
+    tabName: 'Katalon Test'
 ```
