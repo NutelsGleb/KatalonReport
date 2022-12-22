@@ -25,15 +25,15 @@ steps:
 - task: Npm@1
   displayName: 'NPM: Install Task Dependencies'
   inputs:
-    workingDir: tasks/UploadPostmanHtmlReport
+    workingDir: tasks/UploadKatalonHtmlReport
     verbose: false
 
 - task: PackageAzureDevOpsExtension@2
   displayName: 'TFX: Package Extension'
   inputs:
     rootFolder: .
-    publisherId: MaciejMaciejewski
-    extensionName: 'Postman Report'
+    publisherId: GlebNutels
+    extensionName: 'Katalon Report'
     extensionVisibility: public
     extensionPricing: free
     patternManifest: 'azure-devops-extension.json'
@@ -43,10 +43,10 @@ steps:
   displayName: 'TFX: Package Extension Dev'
   inputs:
     rootFolder: .
-    publisherId: MaciejMaciejewski
-    extensionId: 'azure-pipelines-postman'
+    publisherId: GlebNutels
+    extensionId: 'azure-pipelines-katalon'
     extensionTag: dev
-    extensionName: 'Postman Report Dev'
+    extensionName: 'Katalon Report Dev'
     extensionVersion: '1.0.$(Build.BuildId)'
     updateTasksVersion: true
     extensionVisibility: private
@@ -59,10 +59,10 @@ steps:
   inputs:
     connectedServiceName: Marketplace
     rootFolder: .
-    publisherId: MaciejMaciejewski
-    extensionId: 'azure-pipelines-postman'
+    publisherId: GlebNutels
+    extensionId: 'azure-pipelines-katalon'
     extensionTag: dev
-    extensionName: 'Postman Report Dev'
+    extensionName: 'Katalon Report Dev'
     extensionVersion: '1.0.$(Build.BuildId)'
     extensionVisibility: private
     extensionPricing: free
@@ -75,7 +75,7 @@ steps:
     connectedServiceName: Marketplace
     method: vsix
     vsixFile: '**.vsix'
-    accounts: 'maciejmaciejewski-dev'
+    accounts: 'NutelsGleb-dev'
   condition: and(succeeded(), ne(variables['Build.SourceBranchName'], 'master'))
 
 - task: CopyFiles@2
