@@ -22,32 +22,3 @@ steps:
     tabName: 'Katalon Test'
 ```
 
-![](./docs/postman-report-2.png)
-
-## Example
-
-### Report summary on build tab
-
-![](./docs/postman-report-1.png)
-/*
-## Contributors
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-      <td align="center">
-      <a href="https://github.com/maciejmaciejewski">
-        <img src="https://avatars1.githubusercontent.com/u/15831316?v=4" width="100px;" alt=""/>
-        <br />
-        <b>Maciej Maciejewski</b>
-    </td>
-    <td align="center">
-      <a href="https://github.com/afeblot">
-        <img src="https://avatars1.githubusercontent.com/u/12073123?v=4" width="100px;" alt=""/>
-        <br />
-        <b>Alexandre Feblot</b>
-    </td>
-  </tr>
-</table>
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->*/
