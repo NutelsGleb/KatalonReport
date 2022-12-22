@@ -29,7 +29,7 @@ steps:
 ### Report summary on build tab
 
 ![](./docs/postman-report-1.png)
-
+/*
 ## Contributors
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
@@ -50,4 +50,4 @@ steps:
   </tr>
 </table>
 <!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
+<!-- prettier-ignore-end -->*/
