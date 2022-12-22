@@ -41,14 +41,14 @@ function run () {
   const summaryPath = resolve(join(cwd,'summary.json'))
   writeFileSync(summaryPath, JSON.stringify(fileProperties))
 
-  tl.command('task.addattachment', { name: generateName('summary.json'), type: 'postman.summary'}, summaryPath)
+  tl.command('task.addattachment', { name: generateName('summary.json'), type: 'katalon.summary'}, summaryPath)
 }
 
 function generateName (fileName) {
   const jobName = dashify(tl.getVariable('Agent.JobName'))
   const stageName = dashify(tl.getVariable('System.StageDisplayName'))
   const stageAttempt = tl.getVariable('System.StageAttempt')
-  const tabName = tl.getInput('tabName', false ) || 'Postman'
+  const tabName = tl.getInput('tabName', false ) || 'Katalon'
 
   return `${tabName}.${jobName}.${stageName}.${stageAttempt}.${fileName}`
 }
